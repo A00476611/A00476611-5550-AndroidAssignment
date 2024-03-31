@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hotels</string>
+    <string name="check_in_label">Select Check In Date:</string>
+    <string name="check_out_label">Select Check Out Date:</string>
+</resources>
