@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 style="@style/TextAppearance.Material3.DisplaySmall"
+                android:layout_marginTop="10dp"
                 android:text="Mariott"/>
             <TextView
                 android:id="@+id/RoomDetailHotelName"
@@ -62,7 +63,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/TextAppearance.Material3.BodySmall"
-                    android:text="Mariott"/>
+                    android:text="Mariott"
+                    android:layout_marginStart="20dp"/>
             </LinearLayout>
 
 
