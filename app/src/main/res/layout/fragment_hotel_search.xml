@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/MainHotelSearch"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity">
+    tools:context=".room.RoomSearchFragment">
     <ScrollView
         android:id="@+id/ScrollView"
         android:layout_width="match_parent"
@@ -17,43 +17,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="30dp"
+            android:padding="20dp"
             android:focusable="true"
             android:focusableInTouchMode="true">
 
-
-            <TextView
-                android:id="@+id/TitleText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:text="Search Hotels"
-                android:textSize="30sp"/>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/NameLayout"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:layout_constraintTop_toBottomOf="@id/TitleText"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="32dp"
-                android:hint="Your Name">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/NameField"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/GuestCountLayout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                app:layout_constraintTop_toBottomOf="@id/NameLayout"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="32dp"
@@ -63,22 +36,43 @@
                     android:id="@+id/GuestCountField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/CheckInOutLayout"
+                android:id="@+id/CheckInLayout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintTop_toBottomOf="@id/GuestCountLayout"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="32dp"
-                android:hint="Check In - Check Out Date">
+                android:hint="Check In">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/CheckInOutField"
+                    android:id="@+id/CheckInField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CheckOutLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/CheckInLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp"
+                android:hint="Check Out Date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/CheckOutField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
@@ -92,7 +86,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/ClearButton"
-                app:layout_constraintTop_toBottomOf="@id/CheckInOutLayout"
+                app:layout_constraintTop_toBottomOf="@id/CheckOutLayout"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="10dp"
                 android:text="Search"/>
@@ -103,7 +97,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/SearchButton"
-                app:layout_constraintTop_toBottomOf="@id/CheckInOutLayout"
+                app:layout_constraintTop_toBottomOf="@id/CheckOutLayout"
                 android:layout_marginTop="32dp"
                 android:layout_marginStart="10dp"
                 style="@style/Widget.Material3.Button.OutlinedButton"

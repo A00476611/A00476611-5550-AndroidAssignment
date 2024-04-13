@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_booking">
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.hotels.room.RoomSearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_hotel_search" />
+
+    <fragment
+        android:id="@+id/navigation_booking"
+        android:name="com.example.hotels.booking.BookingFragment"
+        android:label="My Bookings"
+        tools:layout="@layout/fragment_booking" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.hotels.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_hotel_list"
+        android:name="com.example.hotels.room.RoomListFragment"
+        android:label="Available Rooms"
+        tools:layout="@layout/fragment_hotel_list" />
+
+    <fragment
+        android:id="@+id/navigation_room_details"
+        android:name="com.example.hotels.room.RoomDetailsFragment"
+        android:label="Room Details"
+        tools:layout="@layout/fragment_room_details" />
+
+    <fragment
+        android:id="@+id/navigation_booking_details"
+        android:name="com.example.hotels.booking.BookingDetailsFragment"
+        android:label="Your booking"
+        tools:layout="@layout/fragment_booking_details" />
+
+
+    <action
+        android:id="@+id/action_search_to_list"
+        app:destination="@id/navigation_hotel_list" />
+
+    <action
+        android:id="@+id/action_list_to_details"
+        app:destination="@id/navigation_room_details" />
+
+    <action
+        android:id="@+id/action_details_to_booking"
+        app:destination="@id/navigation_booking"
+        app:popUpTo="@id/navigation_search"
+        app:popUpToInclusive="true"/>
+</navigation>

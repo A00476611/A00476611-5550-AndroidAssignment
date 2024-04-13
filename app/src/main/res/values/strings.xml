@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Hotels</string>
-    <string name="check_in_label">Select Check In Date:</string>
-    <string name="check_out_label">Select Check Out Date:</string>
+    <string name="app_name">Book Me</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_search">Search</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
